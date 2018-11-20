@@ -16,6 +16,7 @@ function lowestProduct(input) {
 
 
 }
+
 function lowestProduct(input) {
     let mol_a = [];
     if (input.length < 4)
@@ -30,9 +31,24 @@ function lowestProduct(input) {
         }
         console.log(Math.min(...mol_a));
         // console.log(num);
-        
+
         return Math.min(...mol_a);
     }, 0);
+}
+
+function lowestProduct(input) {
+    let mol_a = [];
+    if (input.length < 4)
+        return "Number is too small";
+    return input.split("").reduce(function (_, _, ind, a) {
+        let mol = 0;
+        if (ind < a.length - 3) {
+            mol = a[ind] * a[ind + 1] * a[ind + 2] * a[ind + 3];
+            mol_a.push(mol);
+        }
+        return Math.min(...mol_a);
+    }, 0);
+
 }
 
 
