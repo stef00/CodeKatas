@@ -1,7 +1,11 @@
 function upArray(arr){
-
-    
-    
+    if(arr.every(c=> c>=0))
+    {
+        let num = arr.join("");
+        num++;
+        return Array.from(num.toString()).map(Number);
+    }
+    else return null;
   }
 
 
