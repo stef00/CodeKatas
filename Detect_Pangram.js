@@ -15,6 +15,12 @@ function isPangram(string) {
     else return false;
 }
 
+function isPangram(string){
+    return "abcdefghijklmnopqrstuvwxyz".split('').every(function(e) {
+      return string.toLowerCase().indexOf(e) >= 0;
+    });
+  }
+
 var string = "The quick brown fox jumps over the lazy dog."
 console.log(isPangram(string), true);
 var string = "This is not a pangram."
