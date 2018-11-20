@@ -1,16 +1,16 @@
 function isPangram(string) {
-    let str = string.split("").filter(c => c != " " && c != ".");
+    let str = string.split("").filter(c => c.match(/[a-zA-Z.]+/));
     let reg = "abcdefghijklmnopqrstuvwxyz".split("");
     for (let i = 0; i < reg.length; i++) {
         for (let j = 0; j < str.length; j++) {
             let alfa = reg[i];
             let stringa = str[j];
             if (alfa == stringa) {
-                reg.splice(i,1, "");
+                reg.splice(i, 1, "");
             }
         }
     }
-    if(!reg.join(""))
+    if (!reg.join(""))
         return true;
     else return false;
 }
