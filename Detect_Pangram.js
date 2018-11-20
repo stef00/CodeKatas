@@ -1,5 +1,5 @@
 function isPangram(string) {
-    let str = string.split("").filter(c => c.match(/[a-zA-Z.]+/));
+    let str = string.toLowerCase().split("").filter(c => c.match(/[a-z.]+/));
     let reg = "abcdefghijklmnopqrstuvwxyz".split("");
     for (let i = 0; i < reg.length; i++) {
         for (let j = 0; j < str.length; j++) {
@@ -9,7 +9,7 @@ function isPangram(string) {
                 reg.splice(i, 1, "");
             }
         }
-    }
+    }   
     if (!reg.join(""))
         return true;
     else return false;
@@ -19,3 +19,5 @@ var string = "The quick brown fox jumps over the lazy dog."
 console.log(isPangram(string), true);
 var string = "This is not a pangram."
 console.log(isPangram(string), false);
+var string = "Pack my box with five dozen liquor jugs.";
+console.log(isPangram(string), true);
