@@ -1,5 +1,17 @@
 function findAB(numbers,c){
     //coding and coding...
+    let arr =[];
+    for(let n of numbers){
+        for (let i = numbers.indexOf(n)+1; i < numbers.length; i++) {
+            const element = numbers[i];
+            if(n*element==c){
+                arr.push(n);
+                arr.push(element);
+                return arr;
+            }else return null;
+            
+        }
+    }
   
   }
 
