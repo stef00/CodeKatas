@@ -1,14 +1,9 @@
 function generateDiagonal(row, len) {
-    // return an array containing the numbers in the nth diagonal of Pascal's triangle, to the specified length
-    let n = row;
-    console.log(n);
     let arr =[];
-
     for (let k = 0; k < len; k++) {
-        let num = rFact(n)/(rFact(k)*rFact(n-k));
-        n++;
+        let num = rFact(row)/(rFact(k)*rFact(row-k));
+        row++;
         arr.push(num);
-        console.log(num);
     }
     return arr;
 }
