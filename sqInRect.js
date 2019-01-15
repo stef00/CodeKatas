@@ -24,7 +24,9 @@ function sqInRect(lng, wdth) {
         console.log(t);
         if (Number.isInteger(t)) {
             result.push(t);
+            console.log(i);
             console.log(t);
+            console.log(temp);
             console.log(result);
             temp = temp - Math.pow(t, 2);
             console.log(temp);
